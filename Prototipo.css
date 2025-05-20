@@ -1,0 +1,240 @@
+/* Fondo y estilo general */
+html,body {
+   
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  image-rendering: auto;
+  font-family: Caudex;
+  background-image: url('Diseño\ sin\ título\ \(1\).png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Esto mantiene el fondo fijo */
+  overflow-x: hidden;
+  /*
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100vw;
+  font-family: Caudex;
+  background-color: #1326d271;
+  overflow-x: hidden;
+  */
+}
+
+/* Encabezado */
+.arriba {
+  background-color: #005792;
+  color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que el encabezado esté por encima de otros elementos */
+  
+  
+}
+
+/* Contenedor del encabezado con imagen + texto */
+.encabezado {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Imagen del logo */
+.logo {
+  width: 100px;
+  height: auto;
+  border-radius: 50%; /* Opcional: redondeado */
+  box-sizing: border-box;
+  transform: translateX(5%);
+}
+
+/* Texto del encabezado */
+.texto {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-54%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.texto h1, .texto h2 {
+  text-align: center; /* Centers text without redundant width */
+}
+
+.cuerpo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 100px); /* Ajusta la altura del cuerpo */
+  margin-top: 50px; /* Espacio para el encabezado */
+}
+
+.cuerpo2{
+  display: flex; 
+  justify-content: center; 
+  gap: 40px; 
+  margin: 40px 0;
+}
+
+.panchis{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.contenedor h1 {
+  margin-top: 500px;
+  font-size: 30px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 50px;
+  font-family: cursive; /* Estilo de letra */
+}
+
+.contenedor p{
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  font-family: Caudex; /* Estilo de letra */
+}
+/* Contenido principal (cuadro blanco) */
+.cuadro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem; /* Reduce el espacio entre elementos */
+  padding: 20px ; /* Reduce el padding */
+  background-color: rgba(223, 220, 220, 0.973);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  max-width: 90%;
+  margin-top: 0%;
+  margin: 3% auto 1.5rem auto; /* Aumenta el margen superior para bajar los cuadros */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border: 2px solid black; 
+  width: 300px;
+  text-align: center;
+}
+
+.cuadro h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 0.5rem; /* Reduce el margen inferior */
+}
+
+.cuadro p {
+  font-size: 150%;
+  color: #34495e;
+  line-height: 1.4; /* Reduce el interlineado */
+  margin-bottom: 1rem; /* Reduce el margen inferior */
+}
+
+
+
+.cuadro button {
+  font-family: Caudex; /* Estilo de letra */
+  background-color: #3b51ab;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 20px; /* Ajusta el padding para uniformidad */
+  border-radius: 5px;
+  border: none;
+  width: 100px; /* Define un ancho fijo */
+  height: 50px; /* Define una altura fija */
+  text-align: center;
+}
+
+button:hover {
+  background-color: #5f6eab; /* Celeste */
+  border: 2px solid #3b51ab; /* Azul profundo */
+  color: #ffffff; /* Blanco para buen contraste */
+  padding: 10px 20px; /* Mantén el padding consistente */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  width: 150px; /* Mantén el ancho fijo */
+  height: 50px; /* Mantén la altura fija */
+}
+
+.cuadro img{
+  max-width: 100%;
+  height: auto; 
+  display: block; 
+  margin: 0 auto;
+}
+.seccion {
+  display: none;
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 90%;
+  background-color: white;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.in{
+  display: none;
+}
+
+/* Para la decoración del pie de pagina*/
+
+.pie {
+    background-color: #e0e0e0;
+    color: #000;
+    width: 100%;
+    padding: 20px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.pie-contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.pie-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pie-lista li {
+  margin-bottom: 5px 0;
+  text-decoration: underline;
+}
+
+.pie-lista a {
+    color: #000;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+footer.pie{
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
