@@ -82,7 +82,7 @@ btn1.addEventListener("click", function() {
     contenedor.style.justifyContent = "center";
     contenedor.style.gap = "1rem";
     contenedor.style.marginBottom = "5px";
-    contenedor.style.marginTop = "-80px";
+    contenedor.style.marginTop = "-60px";
     contenedor.style.fontFamily = "'Lobster', cursive, sans-serif";
     contenedor.style.fontSize = "15px";
 
@@ -725,13 +725,36 @@ btn3.addEventListener("click", function () {
     imagenLado.alt = "Contacto"; // Texto alternativo para la imagen
     imagenLado.style.maxWidth = "120px"; // Limita el ancho máximo de la imagen
     imagenLado.style.borderRadius = "8px"; // Bordes redondeados para la imagen
-    contenedor3.appendChild(imagenLado); // Agrega la imagen al contenedor principal
+    // Crear el QR y colocarlo debajo de la imagen principal
+    const qr = document.createElement("img");
+    qr.src = "Image_qr.png"; // Asigna la URL de la imagen QR aquí
+    qr.alt = "Contacto QR";
+    qr.style.maxWidth = "120px";
+    qr.style.borderRadius = "8px";
+    qr.style.display = "block";
+    qr.style.margin = "1rem auto 0 auto";
+    const tex = document.createElement("p");
+    tex.textContent = "Si estas interesado escanea el codigo QR:";
+    tex.style.textAlign = "center";
+    tex.style.fontWeight = "bold";
+    tex.style.fontSize = "10px";
+    tex.style.margin = "3rem 0 0 0";
+    // Crear un contenedor para imagen y QR en columna
+    const imgColumna = document.createElement("div");
+    imgColumna.style.display = "flex";
+    imgColumna.style.flexDirection = "column";
+    imgColumna.style.alignItems = "center";
+    imgColumna.appendChild(imagenLado);
+    imgColumna.appendChild(tex);
+    imgColumna.appendChild(qr);
+    contenedor3.appendChild(imgColumna);
 
     // Contenedor para el texto (h1 y p)
     const textoContenedor = document.createElement("div"); // Crea un div para agrupar el título y el párrafo
     textoContenedor.style.display = "flex"; // Usa flexbox para el texto
     textoContenedor.style.flexDirection = "column"; // Apila los elementos verticalmente
     textoContenedor.style.gap = "0.5rem"; // Espacio entre el título y el párrafo
+    textoContenedor.style.marginTop = "3rem"; // Aumenta este valor para bajar más el texto
 
     // Título
     textoExtraB = document.createElement("h1"); // Crea un elemento h1 para el título
@@ -756,6 +779,57 @@ btn3.addEventListener("click", function () {
     parrafo2.style.fontSize = "20px";
     textoContenedor.appendChild(parrafo2); // Agrega el párrafo al contenedor de texto
 
+    const redesText = document.createElement("p");
+    redesText.textContent = "Si quieres saber más, contáctanos por nuestras redes sociales:";
+    redesText.style.textAlign = "center";
+    redesText.style.fontSize = "10px";
+    redesText.style.fontWeight = "bold";
+    redesText.style.margin = "1rem 0 0 0";
+
+    textoContenedor.appendChild(redesText);
+
+    const redes = document.createElement("div");
+    redes.style.display = "flex";
+    redes.style.justifyContent = "center";
+    redes.style.gap = "1.5rem";
+    redes.style.margin = "2rem 0";
+
+    
+    // Imagen 1
+    const imgA = document.createElement("img");
+    imgA.src = "https://cdn-icons-png.flaticon.com/512/733/733547.png"; // Ejemplo: icono de Facebook
+    imgA.alt = "Facebook";
+    imgA.style.width = "60px";
+    imgA.style.height = "60px";
+    imgA.style.borderRadius = "8px";
+ 
+
+    // Imagen 2
+    // Imagen 2 con enlace
+    const linkB = document.createElement("a");
+    linkB.href = "https://www.instagram.com/sal_mon659/?utm_source=ig_web_button_share_sheet;" // Cambia la URL al perfil real si lo tienes
+    linkB.target = "_blank";
+    const imgB = document.createElement("img");
+    imgB.src = "https://cdn-icons-png.flaticon.com/512/733/733558.png"; // Ejemplo: icono de Instagram
+    imgB.alt = "Instagram";
+    imgB.style.width = "60px";
+    imgB.style.height = "60px";
+    imgB.style.borderRadius = "8px";
+
+    // Imagen 3
+    const imgC = document.createElement("img");
+    imgC.src = "https://cdn-icons-png.flaticon.com/512/733/733579.png"; // Ejemplo: icono de Twitter
+    imgC.alt = "Twitter";
+    imgC.style.width = "60px";
+    imgC.style.height = "60px";
+    imgC.style.borderRadius = "8px";
+    
+
+    redes.appendChild(imgA);
+    linkB.appendChild(imgB);
+    redes.appendChild(linkB);
+    redes.appendChild(imgC);
+    textoContenedor.appendChild(redes);
     contenedor3.appendChild(textoContenedor); // Agrega el contenedor de texto al contenedor principal
     op3.appendChild(contenedor3);
     // Crear el botón "Volver"
@@ -763,7 +837,7 @@ btn3.addEventListener("click", function () {
     e3 = document.createElement("button");
     e3.textContent = "Volver";
     e3.style.display = "block";
-    e3.style.margin = "2rem auto 0 auto";
+    e3.style.margin = "1rem auto 0 auto";
     e3.style.padding = "0.5rem 1rem";
     e3.style.border = "none";
     e3.style.cursor = "pointer";
